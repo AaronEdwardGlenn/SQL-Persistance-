@@ -9,18 +9,16 @@ async function run() {
 
     try {
         await client.connect();
-    
-        await client.query(`
 
+        await client.query(`
+            DROP TABLE IF TABLE EXISTS fish;
         `);
 
         console.log('drop tables complete');
-    }
-    catch (err) {
+    } catch(err) {
         console.log(err);
-    }
-    finally {
+    } finally {
         client.end();
     }
-    
+
 }
