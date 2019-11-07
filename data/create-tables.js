@@ -16,21 +16,28 @@ async function run() {
     try {
         // initiate connecting to db
         await client.connect();
-    
+
         // run a query to create tables
         await client.query(`
-          
+CREATE TABLE fish (
+    id SERIAL PRIMARY KEY NOT NULL,
+    name VARCHAR(256) NOT NULL,
+    species VARCHAR(256) NOT NULL,
+    url VARCHAR(256) NOT NULL,
+    typical-weight-oz INTEGER NOT NULL,
+    salt-water BOOLEAN NOT NULL,
+    fresh-water BOOLEAN NOT NULL,
+    zone VARCHAR(256) NOT NULL
+}
         `);
 
         console.log('create tables complete');
-    }
-    catch (err) {
+    } catch(err) {
         // problem? let's see the error...
         console.log(err);
-    }
-    finally {
+    } finally {
         // success or failure, need to close the db connection
         client.end();
     }
-    
+
 }
