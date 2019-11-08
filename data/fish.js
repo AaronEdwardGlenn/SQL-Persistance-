@@ -1,6 +1,5 @@
 module.exports = [
     {
-        id: 1,
         name: 'Coastal Rainbow Trout',
         species: 'Trout',
         url: 'assets/fish/rainbow_trout.jpg',
@@ -10,7 +9,6 @@ module.exports = [
         zone: 'Marine'
     },
     {
-        id: 2,
         name: 'Steelhead',
         species: 'Trout',
         url: 'assets/fish/steelhead_trout.jpg',
@@ -20,7 +18,6 @@ module.exports = [
         zone: 'Marine'
     },
     {
-        id: 3,
         name: 'Sockeye Salmon',
         species: 'Salmon',
         url: 'assets/fish/sockeye_salmon.jpg',
@@ -30,7 +27,6 @@ module.exports = [
         typical_weight_oz: 240,
     },
     {
-        id: 4,
         name: 'Striped Bass',
         species: 'Bass',
         url: 'assets/fish/striped_bass.jpg',
@@ -40,7 +36,6 @@ module.exports = [
         typical_weight_oz: 1104,
     },
     {
-        id: 5,
         name: 'Black Crappie',
         species: 'Crappie',
         url: 'assets/fish/black_crappie.jpg',
@@ -50,7 +45,6 @@ module.exports = [
         typical_weight_oz: 53,
     },
     {
-        id: 6,
         name: 'Pacific Mackerel',
         species: 'Mackerel',
         url: 'assets/fish/pacific_mackerel.jpg',

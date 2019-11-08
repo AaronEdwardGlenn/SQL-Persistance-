@@ -1,7 +1,4 @@
-import Component from '../Component.js';
-import FishItem from './FishItem.js';
-
-class FishList extends Component {
+import FishListApp from './FishListApp.js';
 
 const app = new FishListApp();
 document.body.prepend(app.renderDOM());

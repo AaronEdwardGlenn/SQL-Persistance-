@@ -11,11 +11,11 @@ async function run() {
         await client.connect();
 
         await client.query(`
-            DROP TABLE IF TABLE EXISTS fish;
+            DROP TABLE IF EXISTS fish;
         `);
 
         console.log('drop tables complete');
-    } catch(err) {
+    } catch (err) {
         console.log(err);
     } finally {
         client.end();
