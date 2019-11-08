@@ -1,7 +1,7 @@
 import Component from '../Component.js'; 
 import Header from '../common/Header.js'; 
 import FishList from './FishList.js'; 
-import { getFishes } from '../services/domain-api.js'; 
+import { getFishes } from '../services/fish-api.js'; 
 
 class FishListApp extends Component {
     onRender(dom) {
