@@ -42,7 +42,7 @@ module.exports = [
     {
         id: 5,
         name: 'Black Crappie',
-        species: 'crappie',
+        species: 'Crappie',
         url: 'assets/fish/black_crappie.jpg',
         salt_water: false,
         fresh_water: true,
