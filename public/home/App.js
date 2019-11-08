@@ -9,11 +9,11 @@ class App extends Component {
     }
 
     renderHTML() {
-        return /*html*/`
+        return /*html*/ `
             <div>
                 <!-- header goes here -->
                 <main>
-                    <p>Main App Page</p>
+                    <h2>Main App Page</h2>
                 </main>
             </div>
         `;

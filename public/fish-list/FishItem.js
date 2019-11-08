@@ -1,17 +1,17 @@
-import Component from '../Component.js'; 
+import Component from '../Component.js';
 
 class FishItem extends Component {
     renderHTML() {
-        const fish = this.props.fish; 
+        const fish = this.props.fish;
 
-        return /*html*/`
+        return /*html*/ `
         <li class='fish-item'>
             <div class ="info-container">
             <h2>${fish.name}</h2>
             <p class="fish-species">${fish.species}</p>
             </div>
 
-            <div class="image-container"> 
+            <div class="image-container">
             <img src="${fish.url}" alt="${fish.name} image">
             </div>
 
@@ -26,4 +26,4 @@ class FishItem extends Component {
     }
 }
 
-export default FishItem; 
+export default FishItem;
