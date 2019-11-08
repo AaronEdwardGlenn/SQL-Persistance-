@@ -3,6 +3,7 @@ import Header from '../common/Header.js';
 import FishList from './FishList.js';
 import { getFishes } from '../services/fish-api.js';
 
+
 class FishListApp extends Component {
     onRender(dom) {
         const header = new Header({ title: 'Oregon Fishes' });

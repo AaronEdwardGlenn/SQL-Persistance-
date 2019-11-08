@@ -35,9 +35,9 @@ app.get('/api/fish', async(req, res) => {
                 name,
                 species,
                 url,
-                typical_weight_oz as "typicalWeight",
-                salt_water as "isSaltWater", 
-                fresh_water as "isFreshWater", 
+                typicalWeightOz,
+                saltWater, 
+                freshWater, 
                 zone
 
             FROM FISH;

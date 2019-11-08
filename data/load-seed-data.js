@@ -17,17 +17,17 @@ async function run() {
             // map every item in the array data
             fishes.map(fish => {
                 return client.query(`
-                    INSERT INTO fish (id, name, species, url, typical_weight_oz, salt_water, fresh_water, zone)
-                    VALUES ($1, $2, $3, $4, $5, $6);
-`);
+                    INSERT INTO fish (name, species, url, typicalWeightOz, saltWater, freshWater, zone)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7);
+`,
                 // Use a "parameterized query" to insert the data,
                 // Don't forget to "return" the client.query promise!
-[fish.id, fish.name, fish.species, fish.url, fish.typical_weight_oz, fish.salt_water, fish.fresh_water]
+                [fish.name, fish.species, fish.url, fish.typical_weight_oz, fish.salt_water, fish.fresh_water, fish.zone]);
             })
         );
 
         console.log('seed data load complete');
-    } catch(err) {
+    } catch (err) {
         console.log(err);
     } finally {
         client.end();
