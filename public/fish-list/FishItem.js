@@ -21,8 +21,6 @@ class FishItem extends Component {
             <p class="zone">${fish.zone}</p>
             </li>
         `;
-
-
     }
 }
 
