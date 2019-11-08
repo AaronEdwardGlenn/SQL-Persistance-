@@ -130,3 +130,31 @@ cats.map returns an array
 VLAEUS ($1, $2) <-----this is unique to what we are doing right now. i think with postgress. 
 
 .then also returns a promise. 
+
+____________________________________
+____________________________________
+____________________________________
+____________________________________
+Notes for 7 Nov 2019
+
+
+to initiate the local server: 
+
+npm run setup-db
+
+
+
+ADD A CAT FORM
+
+/c postress
+/x (turns it on)
+select * from fishes
+
+normalization is putting info into new tables. (type of cat to number); 
+
+when you take data living in one place, living in one object, and we take them and put them in their own separate tables so they have data integrity of their own. 
+
+
+mongo is a noseuqal database. where do we use it here? cuz more startups use it. it is less popular than SQL. Learn SQL over mongo according to Danny. He wishes that he learned SQL rather. 
+
+.. axios is choice.
