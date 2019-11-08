@@ -1,6 +1,6 @@
 const URL = '/api';
 
-export async function getFish() {  
+export async function getFishes() {
     const url = `${URL}/fish`;
 
     const response = await fetch(url);
