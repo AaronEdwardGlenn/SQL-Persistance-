@@ -13,7 +13,7 @@ class FishFormApp extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                    <p>Fish Form Page</p>
+                    <p>Cat Form Page</p>
                 </main>
             </div>
         `;
