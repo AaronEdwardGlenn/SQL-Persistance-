@@ -3,7 +3,7 @@ import Component from '../Component.js';
 class FishItem extends Component {
     renderHTML() {
         const fish = this.props.fish;
-
+        console.log(fish, 'xxxx'); 
         return /*html*/ `
         <li class='fish-item'>
             <div class ="info-container">
@@ -15,9 +15,9 @@ class FishItem extends Component {
             <img src="${fish.url}" alt="${fish.name} image">
             </div>
 
-            <p class="typical_weight_oz">${fish.typical_weight_oz}</p>
-            <p class="fresh_water">${fish.fresh_water}</p>
-            <p class="salt_water">${fish.saltWater}</p>
+            <p class="typical_weight_oz">${fish.typicalweightoz}</p>
+            <p class="fresh_water">${fish.freshwater}</p>
+            <p class="salt_water">${fish.saltwater}</p>
             <p class="zone">${fish.zone}</p>
             </li>
         `;
