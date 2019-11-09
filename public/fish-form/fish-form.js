@@ -1,4 +1,4 @@
-import App from './YourResourceFormApp.js';
+import FishFormApp from './FishFormApp.js';
 
-const app = new App();
+const app = new FishFormApp();
 document.body.prepend(app.renderDOM());

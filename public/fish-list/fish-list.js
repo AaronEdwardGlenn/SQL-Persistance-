@@ -1,4 +1,4 @@
-import App from '../home/App.js';
+import FishListApp from './FishListApp.js';
 
-const app = new App();
+const app = new FishListApp();
 document.body.prepend(app.renderDOM());

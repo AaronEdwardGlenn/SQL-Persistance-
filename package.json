@@ -27,5 +27,13 @@
   "devDependencies": {
     "eslint": "^6.6.0",
     "nodemon": "^1.19.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronEdwardGlenn/SQL-Persistance-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AaronEdwardGlenn/SQL-Persistance-/issues"
+  },
+  "homepage": "https://github.com/AaronEdwardGlenn/SQL-Persistance-#readme"
 }

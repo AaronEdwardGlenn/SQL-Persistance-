@@ -1,0 +1,31 @@
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav a {
+    margin: 0 5px;
+    width: initial;
+}
+
+header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    grid-area: header;
+}
+
+header section,
+header nav ul {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: flex;
+    list-style-type: none;
+}
+
+header h1 {
+    text-align: center;
+    flex-grow: 4;
+}
