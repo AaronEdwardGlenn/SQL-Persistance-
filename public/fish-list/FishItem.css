@@ -1,0 +1,8 @@
+.fish-item {
+    background-color: rgba(5, 17, 242, 0.459);
+    color: rgba(174, 191, 181, 1);
+}
+
+.fish-item h2 {
+    font-size: 1.4em;
+}

@@ -1,3 +1,31 @@
+body {
+    background-color: hsl(191, 50%, 30%);
+}
+
 main {
     padding: 20px 10px;
+    background-color: #C5D9D0;
+}
+
+
+
+/* Color Theme Swatches in RGBA */
+.pacific_mackerel-1-rgba {
+    color: hsl(191, 50%, 30%);
+}
+
+.pacific_mackerel-2-rgba {
+    
+}
+
+.pacific_mackerel-3-rgba {
+    color: rgba(115, 110, 88, 1);
+}
+
+.pacific_mackerel-4-rgba {
+    color: #594b4a;
+}
+
+.pacific_mackerel-5-rgba {
+    color: hsl(0, 0%, 5%);
 }
