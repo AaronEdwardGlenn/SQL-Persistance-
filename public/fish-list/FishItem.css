@@ -1,8 +1,15 @@
 .fish-item {
-    background-color: rgba(5, 17, 242, 0.459);
+    background-color: rgba(5, 17, 242, 1);
     color: rgba(174, 191, 181, 1);
+
 }
 
 .fish-item h2 {
     font-size: 1.4em;
+    color: white;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.fish-item img {
+    max-width: 100%;
 }
