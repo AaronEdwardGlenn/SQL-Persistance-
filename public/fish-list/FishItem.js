@@ -17,7 +17,7 @@ class FishItem extends Component {
             <div class="image-container">
             <img src="${fish.url}" alt="${fish.name} image">
             </div>
-            <span class="freshwater saltwater>${fresh_text} ${salt_text}</span>
+            <span class="freshwater saltwater">${fresh_text} ${salt_text}</span>
             <p class="typical_weight_oz">Typical Weight:${fish.typicalweightoz} oz.</p>
 
             <p class="zone">Zone: ${fish.zone}</p>
