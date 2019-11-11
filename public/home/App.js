@@ -13,7 +13,7 @@ class App extends Component {
             <div>
                 <!-- header goes here -->
                 <main>
-                    <h2>Main App Page</h2>
+                    <h2>Welcome to the Oregon Fish API!</h2>
                 </main>
             </div>
         `;
