@@ -43,8 +43,8 @@ class FishForm extends Component {
     }
 
     renderHTML() {
-        const types = this.props.types;
-        const optionsList = types.map(species => {
+        const species = this.props.species;
+        const optionsList = species.map(species => {
             return `<option value="${species.id}">${species.name}</option>`;
         });
 

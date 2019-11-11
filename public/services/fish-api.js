@@ -8,8 +8,8 @@ export async function getFishes() {
     return data;
 }
 
-export async function getTypes() {
-    const url = `${URL}/types`;
+export async function getSpecies() {
+    const url = `${URL}/species`;
 
     const response = await fetch(url);
     const data = await response.json();

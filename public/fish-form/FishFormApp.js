@@ -1,7 +1,7 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
 import FishForm from './FishForm.js';
-import { getTypes } from '../services/fish-api.js';
+import { getSpecies } from '../services/fish-api.js';
 
 class FishFormApp extends Component {
 
@@ -10,8 +10,8 @@ class FishFormApp extends Component {
         dom.prepend(header.renderDOM());
         const main = dom.querySelector('main');
 
-        const types = await getTypes();
-        const fishForm = new FishForm({ types });
+        const species = await getSpecies();
+        const fishForm = new FishForm({ species });
         main.appendChild(fishForm.renderDOM());
     }
 
