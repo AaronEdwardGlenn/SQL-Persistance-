@@ -20,11 +20,11 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.badge {
-    background-color: rgba(100, 175, 255, 0.4);
-    padding: 0.54rem;
+.badges {
+    background-color: rgba(100, 175, 255, 0.5);
+    padding: 0.5rem;
     border-radius: 30%;
-    margin: 0.4rem;
+    margin: 0.5rem;
 }
 
 .fish-item h2 {
