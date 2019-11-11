@@ -11,7 +11,6 @@ export async function getFishes() {
 export async function getSpecies() {
     const url = `${URL}/species`;
     const response = await fetch(url);
-    console.log(url); 
     const data = await response.json();
     return data;
 }

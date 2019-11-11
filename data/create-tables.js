@@ -19,15 +19,20 @@ async function run() {
 
         // run a query to create tables
         await client.query(`
-CREATE TABLE fish (
-    id SERIAL PRIMARY KEY NOT NULL,
-    name VARCHAR(256) NOT NULL,
-    species VARCHAR(256) NOT NULL,
-    url VARCHAR(256) NOT NULL,
-    typicalWeightOz INTEGER NOT NULL,
-    saltWater BOOLEAN NOT NULL,
-    freshWater BOOLEAN NOT NULL,
-    zone VARCHAR(256) NOT NULL
+            CREATE TABLE species (
+                id SERIAL PRIMARY KEY NOT NULL, 
+                name VARCHAR(256) NOT NULL
+        );
+
+            CREATE TABLE fish (
+                id SERIAL PRIMARY KEY NOT NULL,
+                name VARCHAR(256) NOT NULL,
+                species VARCHAR(256) NOT NULL,
+                url VARCHAR(256) NOT NULL,
+                typicalWeightOz INTEGER NOT NULL,
+                saltWater BOOLEAN NOT NULL,
+                freshWater BOOLEAN NOT NULL,
+                zone VARCHAR(256) NOT NULL
         ); 
         `);
 
