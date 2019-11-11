@@ -23,7 +23,7 @@ app.use(cors()); // enable CORS request
 app.use(express.static('public'));
 // (add middleware utils: logging, cors, static files from public)
 // app.use(...)
-
+app.use(express.json());
 
 // API Routes
 app.get('/api/fish', async(req, res) => {
