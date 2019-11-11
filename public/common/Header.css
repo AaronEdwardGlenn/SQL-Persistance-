@@ -12,6 +12,12 @@ header nav a {
     color: white;
 }
 
+header nav a:hover,
+header nav a:visited,
+header nav a:active {
+    text-shadow: #FC0 1px 0 10px;
+}
+
 header section {
     display: flex;
     align-items: center;
