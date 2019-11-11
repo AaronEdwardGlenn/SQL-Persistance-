@@ -5,7 +5,7 @@ import { getTypes } from '../services/fish-api.js';
 
 class FishFormApp extends Component {
 
-    onRender(dom) {
+    async onRender(dom) {
         const header = new Header({ title: 'Add a Fish' });
         dom.prepend(header.renderDOM());
         const main = dom.querySelector('main');
