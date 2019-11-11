@@ -1,8 +1,11 @@
+body {
+    background-image: url('../assets/fish-poster.jpg');
+    background-size: cover;
+    min-height: 80vw;
+}
+
 main {
     padding: 50px;
     text-align: center;
-    background-image: url('../assets/fish-poster.jpg');
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+    background: rgba(255, 255, 255, 0.2)
 }
