@@ -3,11 +3,19 @@ header nav {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    padding: 0.5rem 0 1rem;
 }
 
 header nav a {
-    margin: 0 5px;
-    width: initial;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+header nav a:hover,
+header nav a:visited,
+header nav a:active {
+    text-shadow: #FC0 1px 0 10px;
 }
 
 header section {
