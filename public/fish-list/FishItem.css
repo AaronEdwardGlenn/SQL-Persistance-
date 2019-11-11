@@ -20,11 +20,20 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.fish-species {
+    position: relative;
+    top: 4px;
+}
+
 .badges {
     background-color: rgba(100, 175, 255, 0.5);
     padding: 0.5rem;
     border-radius: 30%;
     margin: 0.5rem;
+}
+
+.zone {
+    padding-bottom: 1rem;
 }
 
 .fish-item h2 {
