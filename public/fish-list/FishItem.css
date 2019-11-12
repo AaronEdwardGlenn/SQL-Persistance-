@@ -1,0 +1,47 @@
+.fish-item {
+
+    background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 9%, rgba(30, 87, 153, 1) 19%, rgba(41, 137, 216, 1) 50%, rgba(34, 106, 177, 1) 81%, rgba(30, 87, 153, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001e5799', endColorstr='#1e5799', GradientType=0);
+    /* IE6-9 */
+
+    color: rgba(174, 191, 181, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fish-item .info-container {
+    color: rgba(242, 226, 5, 0.459);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0.6rem 0 0.5rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fish-species {
+    position: relative;
+    top: 4px;
+}
+
+.badges {
+    background-color: rgba(100, 175, 255, 0.5);
+    padding: 0.5rem;
+    border-radius: 30%;
+    margin: 0.5rem;
+}
+
+.zone {
+    padding-bottom: 1rem;
+}
+
+.fish-item h2 {
+    font-size: 1.4em;
+    color: white;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.fish-item img {
+    max-width: 100%;
+}

@@ -1,22 +1,22 @@
 import Component from '../Component.js';
 import Header from '../common/Header.js';
-import FishForm from './FishForm.js'; 
-import { getTypes } from '../services/fish-api.js'; 
+import FishForm from './FishForm.js';
+import { getSpecies } from '../services/fish-api.js';
 
 class FishFormApp extends Component {
 
-    onRender(dom) {
+    async onRender(dom) {
         const header = new Header({ title: 'Add a Fish' });
         dom.prepend(header.renderDOM());
         const main = dom.querySelector('main');
 
-        const types = await getTypes();
-        const catForm = new FishForm({ types });
+        const species = await getSpecies();
+        const fishForm = new FishForm({ species });
         main.appendChild(fishForm.renderDOM());
     }
 
     renderHTML() {
-        return /*html*/`
+        return /*html*/ `
             <div>
                 <!-- header goes here -->
                 <main>

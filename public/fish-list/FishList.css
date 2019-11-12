@@ -1,0 +1,14 @@
+.fish {
+    display: block;
+	width: 100%;
+
+}
+
+@media screen and (min-width: 700px) {
+    .fish {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1%;
+        margin: 0 auto;
+    }
+}
