@@ -4,8 +4,8 @@ import FishItem from './FishItem.js';
 class FishList extends Component {
 
     onRender(dom) {
-        const fishes = this.props.fish;
-        fishes.forEach(fish => {
+        const fish = this.props.fish;
+        fish.forEach(fish => {
             const props = { fish: fish };
             const fishItem = new FishItem(props);
             const fishItemDOM = fishItem.renderDOM();
