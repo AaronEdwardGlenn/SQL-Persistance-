@@ -3,6 +3,7 @@ import Component from '../Component.js';
 class FishItem extends Component {
     renderHTML() {
         const fish = this.props.fish;
+        console.log(fish); 
         const fresh_text = (fish.freshwater === true) ? 'Fresh Water' : '';
         const salt_text = (fish.saltwater === true) ? 'Salt Water' : '';
         return /*html*/ `

@@ -52,7 +52,7 @@ class FishForm extends Component {
 
         console.log(joinedOptionsList);
         return /*html*/`
-                < form class="fish-form" >
+                <form class="fish-form">
                     <p>
                         <label for="name">Name</label>
                         <input id="name" name="name" required placeholder="Oregon Fish">
@@ -81,7 +81,7 @@ class FishForm extends Component {
 
                                 <p>
                                     <label for="weight">Weight in Oz</label>
-                                    <span class="horizontally-centered">
+                                    <span class="weight">
                                         <input id="weight" name="weight" type="range" min="0" max="500" value="10">
                                             <span id="weight-display">20</span>
                     </span>
