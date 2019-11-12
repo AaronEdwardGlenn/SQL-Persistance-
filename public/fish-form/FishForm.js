@@ -19,11 +19,11 @@ class FishForm extends Component {
 
             const fish = {
                 name: formData.get('name'),
-                speciesId: parseInt(formData.get('species-id')),
+                species: parseInt(formData.get('species-id')),
                 url: formData.get('url'),
                 zone: parseInt(formData.get('zone')),
-                isFresh: formData.get('is-fresh') === 'on',
-                isSalt: formData.get('is-salt') === 'on'
+                fresh_water: formData.get('is-fresh') === 'on',
+                salt_water: formData.get('is-salt') === 'on'
 
             };
 

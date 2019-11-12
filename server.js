@@ -26,7 +26,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // API Routes
-app.get('/api/fish', async(req, res) => {
+app.get('/api/fish', async (req, res) => {
 
     try {
         const result = await client.query(`
@@ -52,7 +52,7 @@ app.get('/api/fish', async(req, res) => {
 
 
 
-app.post('/api/fish', async(req, res) => {
+app.post('/api/fish', async (req, res) => {
     const fish = req.body;
 
     try {
@@ -81,7 +81,7 @@ app.post('/api/fish', async(req, res) => {
 });
 
 // *** TYPES ***
-app.get('/api/species', async(req, res) => {
+app.get('/api/species', async (req, res) => {
     try {
         const result = await client.query(`
             SELECT *

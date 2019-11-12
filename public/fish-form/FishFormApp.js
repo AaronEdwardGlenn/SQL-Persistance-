@@ -8,10 +8,11 @@ class FishFormApp extends Component {
     async onRender(dom) {
         const header = new Header({ title: 'Add a Fish' });
         dom.prepend(header.renderDOM());
-        const main = dom.querySelector('main');
+        const main = dom.querySelector('.formData');
 
         const species = await getSpecies();
         const fishForm = new FishForm({ species });
+        console.log(fishForm, 'xxxxx'); 
         main.appendChild(fishForm.renderDOM());
     }
 
@@ -19,9 +20,9 @@ class FishFormApp extends Component {
         return /*html*/ `
             <div>
                 <!-- header goes here -->
-                <main>
+                <div class ='formData'>
                     <p>Fish Form Page</p>
-                </main>
+    </div>
             </div>
         `;
     }
