@@ -5,7 +5,7 @@ class FishForm extends Component {
 
     onRender(form) {
         // event goodness for showing display of range value
-        const weightRange = form.querySelector('.weight');
+        const weightRange = form.querySelector('#weight');
         const weightDisplay = form.querySelector('#weight-display');
         const syncWeight = () => weightDisplay.textContent = weightRange.value;
         weightRange.addEventListener('input', syncWeight);
@@ -21,12 +21,12 @@ class FishForm extends Component {
                 name: formData.get('name'),
                 species: parseInt(formData.get('species-id')),
                 url: formData.get('url'),
-                zone: parseInt(formData.get('zone')),
+                zone: formData.get('zone'),
+                typical_weight_oz: parseInt(formData.get('weight')),
                 fresh_water: formData.get('is-fresh') === 'on',
                 salt_water: formData.get('is-salt') === 'on'
-
             };
-
+            
             try {
                 const saved = await addFish(fish);
                 // for now log out our saved cat,
@@ -71,13 +71,6 @@ class FishForm extends Component {
                             <input id="url" name="url" required placeholder="https://media.giphy.com/media/Lzq20swFmfvMs/giphy.gif">
                 </p>
 
-                            <p>
-                                <label for="zone">habitat zone</label>
-                                <input id="zone"
-                                    name="zone"
-                                    placeholder="marine"
-                                    title="habitat zone">
-                </p>
 
                                 <p>
                                     <label for="weight">Weight in Oz</label>
@@ -96,8 +89,12 @@ class FishForm extends Component {
                 <fieldset for="is-fresh">
                                         <legend>Is it a fresh water fish?</legend>
                                         <label class="horizontally-centered">
-                                            <input id="is-fresh" name="is-fresh" type="checkbox"> No
+                                            <input id="is-fresh" name="is-fresh" type="checkbox"> Yes
                     </label>
+                    <p>
+                            <label for="zone">Habitat Zone</label>
+                        <input id="zone" name="zone" required placeholder="Marine">
+                </p>
                 </fieldset>
                                         <p>
                                             <button>Add This Fish</button>

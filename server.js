@@ -53,8 +53,10 @@ app.get('/api/fish', async (req, res) => {
 
 
 app.post('/api/fish', async (req, res) => {
+
     const fish = req.body;
-    console.log(req.body, 'xxxxxxxxxxxx');
+    console.log(req.body,);
+
 
     try {
         const result = await client.query(`
@@ -68,7 +70,7 @@ app.post('/api/fish', async (req, res) => {
             VALUES ($1, $2, $3, $4, $5, $6, $7)
             RETURNING *;
         `,
-        [fish.name, fish.speciesId, fish.url, fish.typical_weight_oz, fish.salt_water, fish.fresh_water, fish.zone]
+        [fish.name, fish.species, fish.url, fish.typical_weight_oz, fish.salt_water, fish.fresh_water, fish.zone]
         );
 
         res.json(result.rows[0]);
