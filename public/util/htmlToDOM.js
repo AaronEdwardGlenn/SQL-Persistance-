@@ -3,6 +3,7 @@ function htmlToDOM(html) {
     template.innerHTML = html;
     const content = template.content;
 
+    // eslint-disable-next-line keyword-spacing
     if(content.children.length > 1) {
         throw new Error('html needs to have single parent element');
     }
