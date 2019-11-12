@@ -27,7 +27,7 @@ async function run() {
             CREATE TABLE fish (
                 id SERIAL PRIMARY KEY NOT NULL,
                 name VARCHAR(256) NOT NULL,
-                species VARCHAR(256) NOT NULL,
+                species_id INTEGER NOT NULL REFERENCES species(id),
                 url VARCHAR(256) NOT NULL,
                 typicalWeightOz INTEGER NOT NULL,
                 saltWater BOOLEAN NOT NULL,

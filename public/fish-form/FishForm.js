@@ -5,7 +5,7 @@ class FishForm extends Component {
 
     onRender(form) {
         // event goodness for showing display of range value
-        const weightRange = form.querySelector('.typical_weight_oz');
+        const weightRange = form.querySelector('#typical_weight_oz');
         const weightDisplay = form.querySelector('#weight-display');
         const syncWeight = () => weightDisplay.textContent = weightRange.value;
         weightRange.addEventListener('input', syncWeight);

@@ -17,10 +17,10 @@ client.connect();
 
 // Application Setup
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.use(morgan('dev')); // http logging
 app.use(cors()); // enable CORS request
-app.use(express.static('public'));git; 
+app.use(express.static('public'));
 // (add middleware utils: logging, cors, static files from public)
 // app.use(...)
 app.use(express.json());
@@ -30,18 +30,15 @@ app.get('/api/fish', async(req, res) => {
 
     try {
         const result = await client.query(`
-            SELECT
-                id,
-                name,
-                species,
-                url,
-                typicalWeightOz,
-                saltWater, 
-                freshWater, 
-                zone
-
-            FROM FISH;
-        `);
+        SELECT
+        f.*,
+        s.name as species
+    FROM fish f
+    JOIN species s
+    ON   f.species_id = s.id
+    ORDER BY s.name;
+    
+`);
 
         res.json(result.rows);
     }
@@ -60,8 +57,8 @@ app.post('/api/fish', async(req, res) => {
 
     try {
         const result = await client.query(`
-            INSERT INTO cats (name,
-                species,
+            INSERT INTO fish (name,
+                species_id,
                 url,
                 typicalWeightOz,
                 saltWater, 
@@ -70,7 +67,7 @@ app.post('/api/fish', async(req, res) => {
             VALUES ($1, $2, $3, $4, $5, $6, $7)
             RETURNING *;
         `,
-        [fish.name, fish.typeId, fish.url, fish.species, fish.weight, fish.saltwater, fish.freshwater, fish.zone]
+        [fish.name, fish.speciesId, fish.url, fish.weight, fish.saltwater, fish.freshwater, fish.zone]
         );
 
         res.json(result.rows[0]);
@@ -84,11 +81,11 @@ app.post('/api/fish', async(req, res) => {
 });
 
 // *** TYPES ***
-app.get('/api/types', async(req, res) => {
+app.get('/api/species', async(req, res) => {
     try {
         const result = await client.query(`
             SELECT *
-            FROM types
+            FROM species
             ORDER BY name;
         `);
 

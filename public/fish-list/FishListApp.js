@@ -13,8 +13,8 @@ class FishListApp extends Component {
         const main = dom.querySelector('main');
         main.appendChild(list.renderDOM());
 
-        getFishes().then(fish => {
-            list.update({ fish });
+        getFishes().then(fishes => {
+            list.update({ fishes });
         });
     }
 

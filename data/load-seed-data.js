@@ -64,7 +64,7 @@ async function run() {
                 });
 
                 return client.query(`
-                    INSERT INTO fish (name, species, url, typicalWeightOz, saltWater, freshWater, zone)
+                    INSERT INTO fish (name, species_id, url, typicalWeightOz, saltWater, freshWater, zone)
                     VALUES ($1, $2, $3, $4, $5, $6, $7);
 `,
                 // Use a "parameterized query" to insert the data,
