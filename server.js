@@ -50,6 +50,39 @@ app.get('/api/fish', async (req, res) => {
 
 });
 
+app.get('/api/fish/:id', async (req, res) => {
+    const id = req.params.id;
+
+    try {
+        const result = await client.query(`
+        SELECT
+        f.*,
+        s.name as species
+    FROM fish f
+    JOIN species s
+    ON   f.species_id = s.id
+        WHERE f.id = $1
+    `,
+        [id]);
+
+        const fish = result.rows[0];
+        if (!fish) {
+            res.status(404).json({
+                error: `Fish id ${id} does not exist`
+            });
+        }
+        else {
+            res.json(result.rows[0]);
+        }
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json({
+            error: err.message || err
+        });
+    }
+});
+
 
 
 app.post('/api/fish', async (req, res) => {
